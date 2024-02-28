@@ -3,20 +3,58 @@
     font-stretch: 25% 151%;
     font-weight: 100 1000;
     font-style: italic;
-    src: url("assets/fonts/DM_Sans/DMSans-Italic-VariableFont_opsz-wght.ttf") format("truetype-variations");
+    src: url("./assets/fonts/DM_Sans/DMSans-Italic-VariableFont_opsz-wght.ttf") format("truetype-variations");
 }
 @font-face {
     font-family: "DM Sans";
     font-stretch: 25% 151%;
     font-weight: 100 1000;
     font-style: normal;
-    src: url("assets/fonts/DM_Sans/DMSans-VariableFont_opsz-wght.ttf") format("truetype-variations");
+    src: url("./assets/fonts/DM_Sans/DMSans-VariableFont_opsz-wght.ttf") format("truetype-variations");
 }
 :root {
     --pure-black-clr: hsl(0, 0%, 0%);
     --pure-white-clr: hsl(0, 0%, 100%);
     --light-gray-clr: hsl(0, 0%, 87%);
+    --main-accent-clr: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
 }
-.test {
-    font-family: "DM Sans";
+.--h1,
+.--h2, 
+.--h3, 
+.--h4,
+.--body-text {
+    --font-size: 40px;
+    --line-height: 48px;
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    font-variation-settings: "wght" 680;
+}
+.--h1 {
+    --font-size: 40px;
+    --line-height: 48px;
+    letter-spacing: .2ch;
+    text-transform: uppercase;
+}
+.--h2 {
+    --font-size: 24px;
+    --line-height: 25px;
+}
+.--h3 {
+    --font-size: 18px;
+    --line-height: 25px;
+}
+.--h4 {
+    --font-size: 12px;
+    --line-height: 16px;
+    letter-spacing: .2ch;
+    text-transform: uppercase;
+}
+.--body-text {
+    --font-size: 15px;
+    --line-height: 25px;
+    font-variation-settings: "wght" 400;
+    font-style: regular;
+}
+body {
+    font-family: 'DM Sans';
 }
