@@ -11,28 +11,31 @@
 </head>
 
 <body>
-  <header>
+  <header class="top-header">
     <div class="logo">
-      <span class="header-logo"></span>
-      <h1 class="h3" style="text-transform: uppercase;">Photosnap</h1>
+      <img src="./assets/images/shared/desktop/logo.svg" alt="">
+      <h1 class="logo__text">Photosnap</h1>
     </div>
-    <button type="button">
-      <span>X</span>
+    <button type="button" class="close-btn" aria-controls="header-nav">
+      <span class="sr-only">Toogle menu</span>
+      <img src="./assets/images/shared/mobile/menu.svg" alt="">
     </button>
-    <nav id="header-nav">
-      <ul>
-        <li>
-          Stories
+    <nav id="header-nav" aria-hidden="true" aria-expanded="false">
+      <ul class="nav-list">
+        <li class="nav-list__item">
+          <a href="#" class="h3">Stories</a>
         </li>
-        <li>
-          Features
+        <li class="nav-list__item">
+          <a href="#" class="h3">Features</a>
         </li>
-        <li>
-          Pricing
+        <li class="nav-list__item --border-dash">
+          <a href="#" class="h3">Pricing</a>    
+        </li>
+        <li class="nav-list__item">
+          <a href="#" class="h3">Get an invite</a>
         </li>
       </ul>
     </nav>
-    <a href="#">Get an invite</a>
   </header>
   <main>
     <article class="section">
