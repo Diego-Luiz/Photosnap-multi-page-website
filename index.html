@@ -12,34 +12,38 @@
 
 <body>
   <header class="top-header">
-    <div class="logo">
-      <img src="./assets/images/shared/desktop/logo.svg" alt="">
-      <h1 class="logo__text">Photosnap</h1>
+    <div class="menu-container">
+      <div class="logo">
+        <img src="./assets/images/shared/desktop/logo.svg" alt="">
+        <h1 class="logo__text">Photosnap</h1>
+      </div>
+      <button type="button" class="close-btn" aria-controls="header-nav">
+        <span class="sr-only">Toogle menu</span>
+        <img src="./assets/images/shared/mobile/menu.svg" alt="">
+      </button>
     </div>
-    <button type="button" class="close-btn" aria-controls="header-nav">
-      <span class="sr-only">Toogle menu</span>
-      <img src="./assets/images/shared/mobile/menu.svg" alt="">
-    </button>
-    <nav id="header-nav" aria-hidden="true" aria-expanded="false">
-      <ul class="nav-list">
-        <li class="nav-list__item">
-          <a href="#" class="h3">Stories</a>
-        </li>
-        <li class="nav-list__item">
-          <a href="#" class="h3">Features</a>
-        </li>
-        <li class="nav-list__item --border-dash">
-          <a href="#" class="h3">Pricing</a>    
-        </li>
-        <li class="nav-list__item">
-          <a href="#" class="h3 bordered-btn --black-bg">Get an invite</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="nav-container">
+      <!-- <nav id="header-nav" aria-hidden="true" aria-expanded="false" class="--expanded">
+        <ul class="nav-list">
+          <li class="nav-list__item">
+            <a href="#" class="h3">Stories</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="#" class="h3">Features</a>
+          </li>
+          <li class="nav-list__item --border-dash">
+            <a href="#" class="h3">Pricing</a>    
+          </li>
+          <li class="nav-list__item">
+            <a href="#" class="h3 bordered-btn --black-bg">Get an invite</a>
+          </li>
+        </ul>
+      </nav> -->
+    </div>
   </header>
   <main>
     <article class="section">
-      <img src="" alt="" class="section__img">
+      <img src="./assets/images/home/mobile/create-and-share.jpg" alt="" class="section__img">
       <section class="section__about">
         <h2 class="h1 title">Create and share your photo Stories.</h2>
         <p class="text">Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others.</p>

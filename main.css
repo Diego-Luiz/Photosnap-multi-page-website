@@ -81,18 +81,24 @@ body {
     font-family: 'DM Sans';
 }
 .top-header {
-    --padding-top: 25px;
-    --padding-bottom: 25px;
     position: sticky;
     inset: 0;
     z-index: 3;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: royalblue;
+}
+.menu-container {
+    --padding-top: 25px;
+    --padding-bottom: 25px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    width: 100%;
+    background-color: pink;
     padding: var(--padding-top) 20px var(--padding-bottom);
-    box-sizing: border-box;
-    background-color: var(--pure-white-clr);
+}
+.nav-container {
+    background-color: rgba(0, 0, 0, .7);
+    height: 100vh;
 }
 .logo {
     position: relative;
@@ -110,6 +116,7 @@ body {
     border: none;
     background-color: transparent;
 }
+
 #header-nav {
     position: absolute;
     bottom: 100%;
