@@ -158,3 +158,15 @@ body {
 .nav-list__item.--border-dash {
     border-bottom: solid 1px var(--light-gray-clr);
 }
+.section .content{
+    padding: 40px;
+}
+.section.--bg-black {
+    background-color: var(--pure-black-clr);
+    color: var(--pure-white-clr);
+}
+.section__img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
