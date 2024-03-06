@@ -237,3 +237,18 @@ body {
     padding-top: 1.5em;
     text-transform: uppercase;
 }
+.features { padding: 50px 0; }
+.features .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px var(--content-horizontal-space);
+}
+.features .container .svg {
+    margin: 2.5em 0;
+}
+.features__text {
+    margin-top: 0;
+    color: var(--light-gray-mid-clr);
+}
