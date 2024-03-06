@@ -21,7 +21,9 @@
     --pure-black-clr: hsl(var(--hue), var(--saturation), var(--black-light));
     --pure-white-clr: hsl(var(--hue), var(--saturation), var(--white-light));
     --light-gray-clr: hsl(var(--hue), var(--saturation), var(--gray-light));
+    --light-gray-mid-clr: hsl(var(--hue), var(--saturation), calc(var(--gray-light) - 40%));
     --main-accent-gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
+    --content-horizontal-space: 40px;
 }
 .h1,
 .h2, 
@@ -82,7 +84,13 @@
     background-color: var(--pure-white-clr);
     color: var(--pure-black-clr);
 }
-
+.unbordered-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: currentColor;
+}
 body {
     font-family: 'DM Sans';
 }
@@ -166,7 +174,7 @@ body {
 }
 .section .content {
     position: relative;
-    padding: 70px 40px;
+    padding: 70px var(--content-horizontal-space);
 }
 .section .content.--rectangle-detail::before {
     content: '';
@@ -186,19 +194,46 @@ body {
     width: 100%;
     object-fit: cover;
 }
-.section__about .title {
-    margin: 0;
-}
+.section__about .title { margin: 0; }
+.section__about .text { color: var(--light-gray-mid-clr); }
 .section__link {
-    display: flex;
-    align-items: center;
     width: max-content;
     padding: 1em;
     padding-left: 0;
-    text-decoration: none;
-    color: currentColor;
 }
 .section__link .arrow {
     margin-left: 2ch;
     color: currentColor;
+}
+.story-section__article {
+    position: relative;
+    color: var(--pure-white-clr);
+}
+.story-section__article .bg-img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+.story-section__article .container {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: var(--content-horizontal-space);
+    background-image: linear-gradient(to top, rgba(0, 0, 0, .8), rgba(0, 0, 0, .1));
+    box-sizing: border-box;
+}
+.story-section__article .title, 
+.story-section__article .author {
+    margin: 0;
+}
+.story-section__article .author {
+    margin: .75em 0 1.25em 0;
+}
+.story-section__article .link {
+    border-top: solid 1px var(--light-gray-mid-clr);
+    padding-top: 1.5em;
+    text-transform: uppercase;
 }
