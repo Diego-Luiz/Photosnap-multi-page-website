@@ -252,3 +252,10 @@ body {
     margin-top: 0;
     color: var(--light-gray-mid-clr);
 }
+.home-footer {
+    background-color: var(--pure-black-clr);
+    color: var(--pure-white-clr);
+}
+.home-footer {
+    padding: 40px var(--content-horizontal-space);
+}
