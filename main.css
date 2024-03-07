@@ -258,4 +258,16 @@ body {
 }
 .home-footer {
     padding: 40px var(--content-horizontal-space);
+    text-align: center;
+}
+.home-footer__socials {
+    list-style: none;
+    padding: 0;
+}
+.home-footer__socials .item {
+    position: relative;
+}
+.item__link {
+    color: currentColor;
+    text-decoration: none;
 }
