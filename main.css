@@ -194,7 +194,11 @@ body {
     object-fit: cover;
 }
 .section__about .title { margin: 0; }
-.section__about .text { color: var(--light-gray-mid-clr); }
+.section__about .text,
+.section__about .date { 
+    color: var(--light-gray-mid-clr); 
+}
+.section__about .author { margin-left: 1ch; }
 .section__link {
     width: max-content;
     padding: 1em;
@@ -282,3 +286,6 @@ body {
 #footer-nav .unbordered-btn { justify-content: center !important; }
 #footer-nav .unbordered-btn svg { margin-left: 3ch; }
 .footer__copyright { color: var(--light-gray-mid-clr); }
+#stories-page .section .content {
+    padding-block: 40px;
+}
