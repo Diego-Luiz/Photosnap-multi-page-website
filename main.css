@@ -317,3 +317,49 @@ body {
     padding: 0;
     margin: 0;
 }
+.plans-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px var(--content-horizontal-space) 30px;
+}
+.plan-label {
+    color: var(--light-gray-mid-clr);
+    font-variation-settings: "wght" 600;
+    transition: color .5s;
+}
+.plan-label.--checked {
+    color: var(--pure-black-clr);
+}
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 64px;
+    height: 32px;
+    padding-inline: 5px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    background-color: var(--light-gray-clr);
+    overflow: hidden;
+}
+.input-container input {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    block-size: 0;
+    opacity: 1;
+}
+.input-container .toggle-btn {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--pure-black-clr);
+    transform: translateX(0); /*valor variavel ajustado pelo js*/
+    transition: transform 1s;
+}
+.input-container .toggle-btn.--toggle {
+    transform: translateX(100%);
+}
