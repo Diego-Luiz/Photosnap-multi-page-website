@@ -23,7 +23,7 @@
     --light-gray-clr: hsl(var(--hue), var(--saturation), var(--gray-light));
     --light-gray-mid-clr: hsl(var(--hue), var(--saturation), calc(var(--gray-light) - 40%));
     --main-accent-gradient: linear-gradient(to top right, #FFC593, #BC7198, #5A77FF);
-    --content-horizontal-space: 38px;
+    --content-horizontal-space: 30px;
 }
 .h1,
 .h2, 
@@ -39,7 +39,7 @@
 .h1 {
     --font-size: 40px;
     --line-height: 48px;
-    letter-spacing: .2ch;
+    letter-spacing: 4.17px;
     text-transform: uppercase;
 }
 .h2 {
@@ -53,7 +53,7 @@
 .h4 {
     --font-size: 12px;
     --line-height: 16px;
-    letter-spacing: .2ch;
+    letter-spacing: 2px;
     text-transform: uppercase;
     font-variation-settings: "wght" 680;
 }
@@ -74,8 +74,10 @@
     width: 100% !important;
     margin: 15px 0 !important; 
     box-sizing: border-box !important;
+    border: none;
 }
-.bordered-btn.--black-bg {
+.bordered-btn.--black-bg,
+.plans-available__item.--black-bg {
     background-color: var(--pure-black-clr);
     color: var(--pure-white-clr);
 }
@@ -175,7 +177,8 @@ body {
     position: relative;
     padding: 70px var(--content-horizontal-space);
 }
-.section .content.--rectangle-detail::before {
+.section .content.--rectangle-detail::before,
+.plans-available__item.--rectangle-detail::before {
     content: '';
     position: absolute;
     top: 0;
@@ -360,6 +363,27 @@ body {
     transform: translateX(0); /*valor variavel ajustado pelo js*/
     transition: transform 1s;
 }
-.input-container .toggle-btn.--toggle {
-    transform: translateX(100%);
+.input-container .toggle-btn.--toggle { transform: translateX(100%); }
+.plans-available { 
+    list-style: none; 
+    padding: 0 var(--content-horizontal-space);
 }
+.plans-available > li { margin-bottom: 30px; }
+.plans-available__item {
+    position: relative;
+    padding: 25px 29px;
+    background-color: #F5F5F5; 
+    text-align: center;
+    box-sizing: border-box;
+}
+.plans-available__item.--rectangle-detail::before {
+    inset: 0;
+    width: 100%;
+}
+.plans-available__item .type { padding-top: 15px; }
+.plans-available__item .description { color: var(--light-gray-mid-clr); }
+.plans-available__item .price { margin-block: 35px;}
+.plans-available__item .price * { display: block; }
+.plans-available__item .price [id*='price'] { font-variation-settings: "wght" 750; }
+.plans-available__item .pick-btn { padding-block: 15px; }
+.plans-available__item .price .plan-type { color: var(--light-gray-mid-clr); }

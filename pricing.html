@@ -56,32 +56,64 @@
       <div class="input-container">
         <input type="radio" name="plan-selected" value="Monthly" id="monthly" checked>      
         <input type="radio" name="plan-selected" value="Yearly" id="yearly"> 
-        <button type="button" class="toggle-btn --toggle">
+        <button type="button" class="toggle-btn">
           <span class="sr-only">Toogle plan selection</span>
         </button> 
       </div>
       <label for="yearly" class="h3 plan-label">Yearly</label>
     </form>
+    <ul class="plans-available">
+      <li>
+        <article class="plans-available__item">
+          <h2 class="type h2">Basic</h2>
+          <p class="body-text description">Includes basic usage of our platform. Recommended for new and aspiring photographers.</p>
+          <p class="price">
+            <!-- $19.00 per month
+            $190.00 per year -->
+            <span class="h1" id="plan1-price">$19.00</span>
+            <span class="body-text plan-type">per month</span>
+          </p>
+          <button type="button" class="bordered-btn --black-bg h4 pick-btn">
+            Pick Plan
+          </button>
+        </article>
+      </li>
+      <li>
+        <article class="plans-available__item --black-bg --rectangle-detail">
+          <h2 class="type h2">Pro</h2>
+          <p class="body-text description">More advanced features available. Recommended for photography veterans and professionals.</p>
+          <p class="price">
+            <!-- 
+              $39.00 per month
+              $390.00 per year
+             -->
+            <span class="h1" id="plan1-price">$39.00</span>
+            <span class="body-text plan-type">per month</span>
+          </p>
+          <button type="button" class="bordered-btn --white-bg h4 pick-btn">
+            Pick Plan
+          </button>
+        </article>
+      </li>
+      <li>
+        <article class="plans-available__item">
+          <h2 class="type h2">Business</h2>
+          <p class="body-text description">Additional features available such as more detailed metrics. Recommended for business owners.</p>
+          <p class="price">
+            <!-- 
+              $99.00 per month
+              $990.00 per year
+             -->
+            <span class="h1" id="plan1-price">$99.00</span>
+            <span class="body-text plan-type">per month</span>
+          </p>
+          <button type="button" class="bordered-btn --black-bg h4 pick-btn">
+            Pick Plan
+          </button>
+        </article>
+      </li>
+    </ul>
   
-  
-  
-    Basic
-    Includes basic usage of our platform. Recommended for new and aspiring photographers.
-    $19.00 per month
-    $190.00 per year
-    Pick Plan
-  
-    Pro
-    More advanced features available. Recommended for photography veterans and professionals.
-    $39.00 per month
-    $390.00 per year
-    Pick Plan
-  
-    Business
-    Additional features available such as more detailed metrics. Recommended for business owners.
-    $99.00 per month
-    $990.00 per year
-    Pick Plan
   
     Compare
   
