@@ -372,7 +372,7 @@ body {
 .plans-available__item {
     position: relative;
     padding: 25px 29px;
-    background-color: #F5F5F5; 
+    background-color: hsla(0, 0%, 96%); 
     text-align: center;
     box-sizing: border-box;
 }
@@ -387,3 +387,23 @@ body {
 .plans-available__item .price [id*='price'] { font-variation-settings: "wght" 750; }
 .plans-available__item .pick-btn { padding-block: 15px; }
 .plans-available__item .price .plan-type { color: var(--light-gray-mid-clr); }
+.table-container {
+    padding-inline: var(--content-horizontal-space);
+}
+.plans-features {
+    position: relative;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+.plans-features__headers tr {
+    border-bottom: 1px solid var(--pure-black-clr);
+}
+.plans-features__headers th:first-child {
+    width: max-content;
+}
+.plans-features__headers .not-visible {
+    position: absolute;
+    right: 100%;
+    opacity: 0;
+}
