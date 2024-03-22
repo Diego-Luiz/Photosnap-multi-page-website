@@ -67,7 +67,9 @@
 .text-gray { color: var(--light-gray-clr); }
 .sr-only {
     position: absolute;
-    inset: 0;
+    top: 0;
+    left: -100%;
+    z-index: -1;
     font-size: 0px;
 }
 .bordered-btn {
@@ -278,7 +280,8 @@ body {
     margin-top: 0;
     color: var(--light-gray-mid-clr);
 }
-.features-page .h1 {
+.features-page .h1,
+.pricing-page .h1 {
     --font-size: 32px;
     --line-height: 40px;
     letter-spacing: 3.33px;
@@ -349,12 +352,15 @@ body {
 .input-container input {
     position: absolute;
     left: 0;
-    top: 100%;
-    block-size: 0;
+    top: 200%;
+    block-size: 0px;
     opacity: 1;
+    visibility: hidden;
 }
 .input-container .toggle-btn {
     position: relative;
+    top: 0;
+    left: 0;
     width: 24px;
     height: 24px;
     border: none;
@@ -368,6 +374,8 @@ body {
     list-style: none; 
     padding: 0 var(--content-horizontal-space);
 }
+.plans-available.monthly .per-year { display: none; }
+.plans-available.yearly .per-month { display: none; }
 .plans-available > li { margin-bottom: 30px; }
 .plans-available__item {
     position: relative;
@@ -384,9 +392,9 @@ body {
 .plans-available__item .description { color: var(--light-gray-mid-clr); }
 .plans-available__item .price { margin-block: 35px;}
 .plans-available__item .price * { display: block; }
-.plans-available__item .price [id*='price'] { font-variation-settings: "wght" 750; }
-.plans-available__item .pick-btn { padding-block: 15px; }
+.plans-available__item .price .plan-price { font-variation-settings: "wght" 750; }
 .plans-available__item .price .plan-type { color: var(--light-gray-mid-clr); }
+.plans-available__item .pick-btn { padding-block: 15px; }
 .table-container {
     padding: 40px var(--content-horizontal-space) 70px;
 }
