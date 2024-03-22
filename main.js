@@ -22,10 +22,10 @@ const pricingPlans = (() => {
   const toggleBtn = document.getElementsByClassName('toggle-btn')[0];
   const typeOfPlan = document.getElementsByName('type-of-plan');
   const plansAvailable = document.querySelector('.plans-available');
-  pricingForm.addEventListener('submit', (event) => {
+  pricingForm?.addEventListener('submit', (event) => {
     event.preventDefault();
   });
-  inputContainer.addEventListener('click', (event) => {
+  inputContainer?.addEventListener('click', (event) => {
     if(event.target == inputContainer || event.target == toggleBtn) {
       toggleBtn.classList.toggle('--toggle');
       typeOfPlan.forEach((input) => {
