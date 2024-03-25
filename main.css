@@ -94,9 +94,8 @@
     text-decoration: none !important;
     color: currentColor !important;
 }
-body {
-    font-family: 'DM Sans';
-}
+body { font-family: 'DM Sans'; }
+body.--no-overflow { overflow: hidden; }
 .top-header {
     position: sticky;
     inset: 0;
@@ -186,6 +185,9 @@ body {
     text-transform: uppercase;
 }
 .nav-list__item.--border-dash { border-bottom: solid 1px var(--light-gray-clr); }
+.homepage .h1 {
+    --font-size: 32px;
+}
 .section { position: relative; }
 .section .content {
     position: relative;
@@ -272,6 +274,10 @@ body {
     text-transform: uppercase;
 }
 .story-section__article .date { margin-bottom: 8px; }
+.story-section__article .author,
+.story-section__article .date {
+    font-size: 13px;
+}
 .features { padding: 50px 0; }
 .features.--features-page { 
     margin: 0; 
