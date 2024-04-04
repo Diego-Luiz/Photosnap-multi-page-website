@@ -506,8 +506,10 @@ body.--no-overflow { overflow: hidden; }
     .homepage .h1 { --font-size: 40px; }
     .top-header {
         display: flex;
-        justify-content: space-around;
-        padding-block: 28px;
+        align-items: center;
+        padding: 19px 5%;
+        /* padding-inline: 10%; */
+        max-width: 1920px;
     }
     .top-header .close-btn { display: none; }
     .menu-container { 
@@ -518,17 +520,22 @@ body.--no-overflow { overflow: hidden; }
         position: static;
         visibility: visible;
         opacity: 1;
-        width: auto;
         height: auto;
     }
-    .nav-list__item.--border-dash { border: none; }
+    .nav-list__item { width: max-content; }
+    .nav-list__item:first-child { margin-left: auto; } 
+    .nav-list__item.--border-dash { 
+        margin-right: auto;
+        border: none; 
+    }
     .nav-list__item .bordered-btn { 
         margin: 0; 
         width: max-content !important;
+        padding: 1em 2em;
     }
     #header-nav {
         position: static;
-        width: auto;
+        box-sizing: border-box;
     }
     #header-nav .nav-list {
         padding: 0;
