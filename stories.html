@@ -44,7 +44,11 @@
   </header>
   <main id="stories-page">
     <article class="section --bg-black">
-      <img src="./assets/images/stories/mobile/moon-of-appalacia.jpg" alt="" class="section__img">
+      <picture class="section__img">
+        <source media="(min-width: 992px)" srcset="./assets/images/stories/desktop/moon-of-appalacia.jpg"/>
+        <source media="(min-width: 500px)" srcset="./assets/images/stories/tablet/moon-of-appalacia.jpg"/>
+        <img src="./assets/images/stories/mobile/moon-of-appalacia.jpg" alt="" class="section__img">
+      </picture>
       <div class="content body-text">
         <h2 class="h4 title">Last month's featured story</h2>
         <section class="section__about">
@@ -336,14 +340,12 @@
         <li class="nav-list__item">
           <a href="./pricing.html" class="h4">Pricing</a>    
         </li>
-        <li class="nav-list__item">
-          <a href="" class="h4 unbordered-btn">
-            Get an invite
-            <svg xmlns="http://www.w3.org/2000/svg" width="43" height="14" class="arrow"><g fill="none" fill-rule="evenodd" stroke="currentColor"><path d="M0 7h41.864M35.428 1l6 6-6 6"/></g></svg>
-          </a>
-        </li>
       </ul>
     </nav>
+    <a href="" class="h4 unbordered-btn getinvite-btn">
+      Get an invite
+      <svg xmlns="http://www.w3.org/2000/svg" width="43" height="14" class="arrow"><g fill="none" fill-rule="evenodd" stroke="currentColor"><path d="M0 7h41.864M35.428 1l6 6-6 6"/></g></svg>
+    </a>
     <p class="footer__copyright">Copyright 2019. All Rights Reserved</p>
   </footer>
 </body>
