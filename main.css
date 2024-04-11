@@ -607,6 +607,7 @@ picture.section__img::before {
     }
     .section { grid-template-columns: 1fr 35%; }
     .section.--order-1 { grid-template-columns: 35% 1fr; }
+    .section.--bg-img .title { padding-right: 2.5ch; }
     .story-section,
     .articles-list {
         display: grid;
@@ -721,4 +722,43 @@ picture.section__img::before {
     }
     .features-page .features .container:nth-child(odd) { padding-right: 0; }
     .features-page .features .container:nth-child(even) { padding-left: 0; }
+    #pricing-form { padding-block: 60px; }
+    .plans-container {
+        justify-content: center;
+        gap: 4ch;
+    }
+    .plans-available__item {
+        display: grid;
+        grid-template: repeat(3, max-content) / repeat(2, 1fr);
+        padding-inline: 40px;
+        padding-bottom: 45px;
+        row-gap: 20px;
+    }
+    .plans-available__item .type,
+    .plans-available__item .description,
+    .plans-available__item .pick-btn {
+        grid-column: 1;
+        text-align: left;
+    }
+    .plans-available__item .pick-btn { 
+        margin-top: 10px !important;
+        text-align: center; 
+    }
+    .plans-available__item .type {
+        margin: 0;
+    }
+    .plans-available__item .description { margin: 0; }
+    .plans-available__item .price {
+        grid-row: 1 / 3;
+        grid-column: 2;
+        justify-self: end;
+        width: max-content;
+        height: max-content;
+        margin: 0;
+        padding-top: 18px;
+    }
+    .plans-available__item .plan-type { 
+        text-align: right; 
+        padding-right: 1ch;
+    }
 }
