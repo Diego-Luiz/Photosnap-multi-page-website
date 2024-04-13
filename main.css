@@ -502,6 +502,11 @@ picture.section__img::before {
     grid-column: 1/-1;
     margin-bottom: 35px;
 }
+.plans-features caption { 
+    position: absolute;
+    left: 100%;
+    opacity: 0;
+}
 @media screen and (min-width: 500px) {
     .section {
         display: grid;
@@ -542,7 +547,8 @@ picture.section__img::before {
         padding-right: 0;
     }
     .section.--bg-img .section__img { grid-column: 1 / -1; }
-    .section.--rectangle-detail::before {
+    .section.--rectangle-detail::before,
+    .plans-available__item.--rectangle-detail::before {
         width: 6px;
         height: 100%;
         margin: 0;
@@ -761,4 +767,37 @@ picture.section__img::before {
         text-align: right; 
         padding-right: 1ch;
     }
+    .table-container { padding-bottom: 120px; }
+    .plans-features { --fixed-column-size: 20%; }
+    .plans-features td,
+    .plans-features th {
+        width: max-content;
+    }
+    .plans-features caption {
+        position: static;
+        opacity: 1;
+        display: block;
+        margin-bottom: 2.5ch;
+    }
+    .plans-features__headers .not-visible {
+        position: relative;
+        inset: 0;
+        opacity: 1;
+    }
+    .plans-features__headers tr { display: grid; }
+    .plans-features__headers tr,
+    .plans-features__row {
+        grid-template-columns: 1fr repeat(3, var(--fixed-column-size));
+        justify-items: center;
+    }
+    .plans-features__row td:first-child {
+        margin: 0;
+        grid-column: 1;
+    }
+    .plans-features__headers th:first-child,
+    .plans-features__row td:first-child {
+        justify-self: start;
+        text-indent: 2ch;
+    }
+    .plans-features__row td:not(:first-child)::before { opacity: 0; }
 }
