@@ -579,7 +579,6 @@ picture.section__img::before {
         display: flex;
         align-items: center;
         padding: 19px 5%;
-        /* padding-inline: 10%; -> p/as proximas media queries*/
         max-width: 1920px;
     }
     .top-header .close-btn { display: none; }
@@ -826,9 +825,8 @@ picture.section__img::before {
 }
 @media screen and (min-width: 1200px) {
     :root { --content-horizontal-space: 120px; }
-    .section {
-        grid-template-columns: 1fr 55%;
-    }
+    .top-header { padding-inline: 10%; }
+    .section { grid-template-columns: 1fr 55%; }
     .section.--order-1 { grid-template-columns: 55% 1fr; } 
     .home-footer {
         grid-template: repeat(2, auto) / auto 1fr auto;
