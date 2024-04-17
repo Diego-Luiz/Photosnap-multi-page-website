@@ -564,6 +564,7 @@ picture.section__img::before {
         padding-inline: 0;
         justify-self: center;
     }
+    .table-container { margin-inline: auto; }
 }
 @media screen and (min-width: 768px) {
     :root { --content-horizontal-space: 54px; }
@@ -840,7 +841,7 @@ picture.section__img::before {
         grid-column: 2 / 3;
         grid-row: 1 / -1;
         padding: 0;
-        padding-left: 8ch;
+        padding-left: 10ch;
     }
     #footer-nav .nav-list {
         flex-direction: column;
@@ -880,6 +881,46 @@ picture.section__img::before {
         width: 400px;
     }
     picture.section__img::before { background: transparent; }
+    .plans-available {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 27px;
+    }
+    .plans-available__item {
+        grid-template: repeat(4, max-content) / 1fr;
+        justify-items: center;
+        padding-block: 50px;
+        max-width: 350px;
+    }
+    .plans-available__item.--rectangle-detail {
+        padding-block: 74px;
+    }
+    .plans-available__item.--rectangle-detail::before {
+        width: 100%;
+        height: 6px;
+    }
+    .plans-available__item .type { grid-row: 1; }
+    .plans-available__item .description { 
+        grid-row: 2;
+        text-align: center;
+     }
+    .plans-available__item .price { 
+        grid-row: 3;
+        justify-self: unset;
+    }
+    .plans-available__item .plan-type { text-align: unset; }
+    .plans-available__item .pick-btn { grid-row: 4; }
+    .plans-available__item .type,
+    .plans-available__item .description,
+    .plans-available__item .price,
+    .plans-available__item .pick-btn{
+        grid-column: 1;   
+    }
+    .table-container {
+        max-width: 731px;
+        padding-bottom: 150px;
+    }
 }
 @media screen and (min-width: 1400px) {
     :root { --content-horizontal-space: 120px; }
