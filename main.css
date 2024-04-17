@@ -859,6 +859,27 @@ picture.section__img::before {
     .features-page .container:nth-child(3n) {
         align-self: start;
     }
+    .section.--bg-img {
+        grid-template-columns: 50% 50%;
+        justify-items: space-between;
+    }
+    .section__link.--bg-beta {
+        justify-self: end;
+        margin-right: var(--content-horizontal-space);
+    }
+    .section__link.--bg-beta, 
+    .section.--bg-img .content {
+        padding: 0;
+    }
+    .section.--bg-img .content {
+        width: max-content;
+        justify-self: center;
+    }
+    .section.--bg-img .title { 
+        padding: 0; 
+        width: 400px;
+    }
+    picture.section__img::before { background: transparent; }
 }
 @media screen and (min-width: 1400px) {
     :root { --content-horizontal-space: 120px; }
