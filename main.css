@@ -210,7 +210,8 @@ body.--no-overflow { overflow: hidden; }
 }
 .section .content.--rectangle-detail::before,
 .section.--rectangle-detail::before,
-.plans-available__item.--rectangle-detail::before {
+.plans-available__item.--rectangle-detail::before,
+.story-section__article::before {
     content: '';
     position: absolute;
     top: 0;
@@ -220,6 +221,14 @@ body.--no-overflow { overflow: hidden; }
     background-image: var(--main-accent-gradient);
     z-index: 3;
 }
+.story-section__article::before {
+    top: initial;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+.story-section__article:hover::before { opacity: 1; }
 .section.--rectangle-detail::before { margin-left: var(--content-horizontal-space); }
 .section.--bg-black {
     background-color: var(--pure-black-clr);
@@ -298,7 +307,10 @@ picture.section__img::before {
 .story-section__article {
     position: relative;
     color: var(--pure-white-clr);
+    transition: transform 1s;
+    cursor: pointer;
 }
+.story-section__article:hover { transform: translateY(-20px);}
 .story-section__article .bg-img {
     display: block;
     width: 100%;

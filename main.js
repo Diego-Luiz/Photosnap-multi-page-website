@@ -44,3 +44,8 @@ const pricingPlans = (() => {
     }
   });
 })();
+
+const storySectionArticles = (() => {
+  const articles = document.getElementsByClassName('story-section__article');
+  console.log('articles: ', articles);
+})();
