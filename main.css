@@ -267,6 +267,7 @@ body.--no-overflow { overflow: hidden; }
     grid-row: 1 / -1;
     grid-column: 1;
 }
+.section__link
 picture.section__img::before {
     content: '';
     display: block;
@@ -306,6 +307,7 @@ picture.section__img::before {
 .section__link:focus-visible { outline: solid 1px currentColor;}
 .story-section__article {
     position: relative;
+    z-index: 2;
     color: var(--pure-white-clr);
     transition: transform 1s;
     cursor: pointer;
@@ -468,6 +470,7 @@ picture.section__img::before {
     border-radius: 25px;
     background-color: var(--light-gray-clr);
     overflow: hidden;
+    transition: background-color .75s;
 }
 .input-container input {
     position: absolute;
@@ -487,7 +490,17 @@ picture.section__img::before {
     border-radius: 50%;
     background-color: var(--pure-black-clr);
     transform: translateX(0); /*valor variavel ajustado pelo js*/
-    transition: transform 1s;
+    transition-property: background-color, transform;
+    transition-duration: .75s, 1s;
+    cursor: pointer;
+}
+.input-container:has(.toggle-btn:hover),
+.input-container:has(.toggle-btn:focus-visible) {
+    background-color: var(--pure-black-clr);
+}
+.input-container .toggle-btn:hover,
+.input-container .toggle-btn:focus-visible {
+    background-color: var(--pure-white-clr);
 }
 .input-container .toggle-btn.--toggle { transform: translateX(100%); }
 .plans-available { 
@@ -514,7 +527,14 @@ picture.section__img::before {
 .plans-available__item .price * { display: block; }
 .plans-available__item .price .plan-price { font-variation-settings: "wght" 750; }
 .plans-available__item .price .plan-type { color: var(--light-gray-mid-clr); }
-.plans-available__item .pick-btn { padding-block: 15px; }
+.plans-available__item .pick-btn { 
+    padding-block: 15px; 
+    cursor: pointer;
+}
+.plans-available__item .pick-btn[data-type-plan="pro"]:hover,
+.plans-available__item .pick-btn[data-type-plan="pro"]:focus-visible {
+    background-color: var(--light-gray-clr);
+}
 .table-container {
     padding: 40px var(--content-horizontal-space) 70px;
 }
@@ -744,7 +764,10 @@ picture.section__img::before {
         margin: 0;
         font-size: 15px;
     }
-    #stories-page .section { grid-template-columns: 1fr; }
+    #stories-page .section { 
+        --before-opacity: 0;
+        grid-template-columns: 1fr; 
+    }
     #stories-page .section__img,
     #stories-page .content {
         grid-column: 1;
@@ -753,7 +776,7 @@ picture.section__img::before {
     #stories-page .section__img { 
         position: relative;  
         z-index: 1;
-        filter: contrast(120%);
+        filter: contrast(110%);
     }
     #stories-page .section__img::before { 
         content: '';
@@ -763,14 +786,11 @@ picture.section__img::before {
         left: 0;
         z-index: 2;
         display: block;
-        width: 30%;
-        height: 50%;
-        /* to top right, #FFC593, #BC7198, #5A77FF */
-        background-image: radial-gradient(circle, #FFC593 23%, #BC7198 53%, #5A77FF);
-        /* background: var(--main-accent-gradient), rgba(0, 0, 0, .5); */
-        /* background-blend-mode: hard-light; */
-        /* opacity: .3; */
-        
+        width: 50%;
+        height: 100%;
+        background-image: radial-gradient(circle at left bottom, hsla(28, 100%, 79%, 100%), hsla(329, 36%, 59%, 49.7%) 52%, hsla(229, 100%, 67%, 0.01%), transparent);
+        opacity: var(--before-opacity);
+        transition: opacity, .75s;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
     }
     #stories-page .content { width: 63.75%; }
     #stories-page .section__about .date,
