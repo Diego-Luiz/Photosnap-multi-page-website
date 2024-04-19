@@ -25,7 +25,6 @@ const pricingPlans = (() => {
   const typeOfPlan = document.getElementsByName('type-of-plan');
   const plansAvailable = document.querySelector('.plans-available');
   const plansInputLabel = document.getElementsByClassName('plan-label');
-  console.log('plansInputLabel: ', plansInputLabel);
   pricingForm?.addEventListener('submit', (event) => {
     event.preventDefault();
   });
@@ -47,5 +46,14 @@ const pricingPlans = (() => {
 
 const storySectionArticles = (() => {
   const articles = document.getElementsByClassName('story-section__article');
-  console.log('articles: ', articles);
+  Array.from(articles).forEach((article) => {
+    article.addEventListener('click', () => {
+      Array.from(article.children).filter((child) => {
+        if(child.className.includes('container')) {
+          let link = Array.from(child.children).filter((innerChild) => innerChild.className.includes('link'));
+          window.location.href = link[0].href;
+        }
+      }); 
+    });
+  });
 })();
