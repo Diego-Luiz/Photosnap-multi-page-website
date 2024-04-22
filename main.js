@@ -62,10 +62,10 @@ const storySection = (() => {
       }
     }); 
   }
-  sectionLinkBtn.addEventListener('mouseenter', activateSectionHoverEffect);
-  sectionLinkBtn.addEventListener('focusin', activateSectionHoverEffect);
-  sectionLinkBtn.addEventListener('mouseout', deactivateSectionHoverEffect);
-  sectionLinkBtn.addEventListener('focusout', deactivateSectionHoverEffect);
+  sectionLinkBtn?.addEventListener('mouseenter', activateSectionHoverEffect);
+  sectionLinkBtn?.addEventListener('focusin', activateSectionHoverEffect);
+  sectionLinkBtn?.addEventListener('mouseout', deactivateSectionHoverEffect);
+  sectionLinkBtn?.addEventListener('focusout', deactivateSectionHoverEffect);
   Array.from(articles).forEach((article) => {
     article.addEventListener('click', changeWindowLocation.bind(this, article));  
   });
