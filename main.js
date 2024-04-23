@@ -45,8 +45,8 @@ const pricingPlans = (() => {
 })();
 
 const storySection = (() => {
-  const initialSection = document.querySelector('#stories-page .section.--bg-black');
-  const sectionLinkBtn = document.querySelector('#stories-page .section__link');
+  const initialSection = document.querySelector('.stories-page .section.--bg-black');
+  const sectionLinkBtn = document.querySelector('.stories-page .section__link');
   const articles = document.getElementsByClassName('story-section__article');
   function activateSectionHoverEffect () {
     initialSection.style = '--before-opacity: .6;';

@@ -1044,7 +1044,17 @@ picture.section__img::before {
 @media screen and (min-width: 1400px) {
     :root { --content-horizontal-space: 120px; }
     .features-page .container { max-width: 350px; }
-
+    .home-footer { padding-inline: calc(var(--content-horizontal-space) + 1.74%); }
+    .stories-page .content { 
+        max-width: 387px;
+        padding: 0;
+        margin-left: 112px;
+     }
+    .stories-page .content .title { margin-bottom: 30px; }
+    .features-page .features { 
+        padding-top: 120px;
+        padding-bottom: 140px;
+    }
 }
 @media screen and (min-width: 1500px){
     .articles-list { grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); }
