@@ -4,7 +4,10 @@ const headerNav = (() => {
   const closeBtnImg = document.querySelector('.top-header .close-btn img');
   const navContainer = document.querySelector('.nav-container');
   const headerNav = document.getElementById('header-nav');
- 
+  if(window.innerWidth <= 768) {
+    headerNav.setAttribute('aria-hidden', true);
+    headerNav.setAttribute('aria-expanded', false);
+  }
   closeBtn.addEventListener('click', () => {
     body.classList.toggle('--no-overflow');
     navContainer.classList.toggle('--visible');
@@ -47,26 +50,14 @@ const pricingPlans = (() => {
 const storySection = (() => {
   const initialSection = document.querySelector('.stories-page .section.--bg-black');
   const sectionLinkBtn = document.querySelector('.stories-page .section__link');
-  const articles = document.getElementsByClassName('story-section__article');
   function activateSectionHoverEffect () {
     initialSection.style = '--before-opacity: .6;';
   }
   function deactivateSectionHoverEffect () {
     initialSection.style = '--before-opacity: .0;';
   }
-  function changeWindowLocation (article) {
-    Array.from(article.children).filter((child) => {
-      if(child.className.includes('container')) {
-        let link = Array.from(child.children).filter((innerChild) => innerChild.className.includes('link'));
-        window.location.href = link[0].href;
-      }
-    }); 
-  }
   sectionLinkBtn?.addEventListener('mouseenter', activateSectionHoverEffect);
   sectionLinkBtn?.addEventListener('focusin', activateSectionHoverEffect);
   sectionLinkBtn?.addEventListener('mouseout', deactivateSectionHoverEffect);
   sectionLinkBtn?.addEventListener('focusout', deactivateSectionHoverEffect);
-  Array.from(articles).forEach((article) => {
-    article.addEventListener('click', changeWindowLocation.bind(this, article));  
-  });
 })();
