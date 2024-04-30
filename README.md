@@ -1,7 +1,7 @@
 # Photosnap Website Challenge
 ![Screenshot_1](https://github.com/Diego-Luiz/Photosnap-multi-page-website/assets/51066402/4514c104-7a8a-486e-bd62-73b6842c57f6)
 
-Photosnap is a fake website where photographers and story tellers could share their experiences, stories and photos. This project was built according to the [Frontend Mentor Challenge](https://www.frontendmentor.io/challenges/photosnap-multipage-website-nMDSrNmNW).
+Photosnap is a responsive, mobile first, fake website where photographers and story tellers could share their experiences, stories and photos. This project was built according to the [Frontend Mentor Challenge](https://www.frontendmentor.io/challenges/photosnap-multipage-website-nMDSrNmNW).
 
 The main goal with this project was to remember and reinforce the base concepts of a web frontend engineer: HTML, CSS, JS; and also to update myself about the new tools that were made available especially in CSS.
 
