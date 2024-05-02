@@ -12,7 +12,7 @@ The main goal with this project was to remember and reinforce the base concepts 
 - [Built with](#builtwith)
   
 ## How to run the project <a name="runproject"></a>
-- (1) - Acessing the live version of the website by [clicking here]()
+- (1) - Acessing the live version of the website by [clicking here](https://photosnap-mpage-website.netlify.app)
 - (2) - Executing a local version:
   - Open the command prompt and clone this repository running ```git clone https://github.com/Diego-Luiz/Photosnap-multi-page-website``` in the path you want this project
   - After the project being cloned, open the folder and click twice on ```index.html``` file
@@ -58,4 +58,4 @@ The main goal with this project was to remember and reinforce the base concepts 
 - CSS
 - Javascript
 - Git & Github
-- Deployed in [here]()
+- Deployed in [Netlify](https://www.netlify.com/)
